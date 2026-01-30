@@ -378,3 +378,29 @@ table td {
         font-size: 14px;
     }
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Image de fond globale */
+    background-image: url('mhgu.jpeg');
+    background-size: cover;          /* couvre tout l'écran */
+    background-position: center;     /* centre l'image */
+    background-repeat: no-repeat;
+    background-attachment: fixed;    /* pour desktop, on peut mettre scroll sur mobile */
+}
+
+/* Pour mobile, on évite le fixed qui bug */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    /* Centrer le contenu sur mobile */
+    .content, .content-armes {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
