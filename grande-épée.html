@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter Generations Ultimate - Grande Épée</title>
+
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="MonsterHunterGenerationUltimate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="content">
+
+    <!-- TITRE -->
+    <h1>Grande Épée</h1>
+
+    <!-- ONGLETS EN HAUT -->
+    <div class="onglets">
+        <button class="onglet actif" onclick="changerOnglet('resume', this)">Résumé</button>
+        <button class="onglet" onclick="changerOnglet('styles', this)">Styles & Arts</button>
+        <button class="onglet" onclick="changerOnglet('caracteristiques', this)">Caractéristiques</button>
+        <button class="onglet" onclick="changerOnglet('forge', this)">La Forge</button>
+    </div>
+
+    <!-- IMAGE + TEXTE PRINCIPAL (fixe, ne change pas avec les onglets) -->
+    <div class="arme-layout">
+       <img src="grande-épée.png" alt="Grande Épée" class="arme-image">
+
+        <p class="texte">
+            La <strong>Grande Épée</strong> est une arme emblématique de Monster Hunter, connue pour sa <strong>puissance de frappe énorme</strong> et sa portée longue. Elle inflige de <strong>lourds dégâts</strong> mais est relativement lente et demande de la stratégie pour anticiper les mouvements des monstres.
+        </p>
+    </div>
+
+    <!-- CONTENU DES ONGLETS -->
+    <div class="contenu-onglets">
+
+        <!-- RÉSUMÉ (visible par défaut) -->
+        <div id="resume" class="contenu actif">
+            <p class="texte">
+                La Grande Épée est l’arme des joueurs <strong>stratégiques et patients</strong>, capable de <strong>détruire les monstres en quelques coups puissants</strong>. C’est une arme spectaculaire qui demande de la maîtrise, mais qui récompense le joueur avec un style de jeu puissant et satisfaisant.
+            </p>
+        </div>
+
+        <!-- STYLES & ARTS -->
+<div id="styles" class="contenu">
+    <p class="texte">
+        La Grande Épée bénéficie fortement des styles de chasse. Le style Guilde est équilibré, le style Brave permet des charges extrêmement puissantes, tandis que le style Aérien facilite les attaques sautées. Les Arts de Chasse renforcent la mobilité ou les dégâts, comme les charges surpuissantes ou les contre-attaques.
+    </p>
+
+    <!-- TABLEAU -->
+    <table>
+        <thead>
+            <tr>
+                <th>Style</th>
+                <th>Art de chasse</th>
+                <th>Effet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Guilde</td>
+                <td>Charge Puissante</td>
+                <td>Dégâts élevés sur un coup chargé</td>
+            </tr>
+            <tr>
+                <td>Brave</td>
+                <td>Fente Extrême</td>
+                <td>Charge maximale mais immobilise le joueur</td>
+            </tr>
+            <tr>
+                <td>Aérien</td>
+                <td>Saut Critique</td>
+                <td>Permet d’attaquer en l’air avec bonus de dégâts</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+        <!-- CARACTÉRISTIQUES -->
+        <div id="caracteristiques" class="contenu">
+            <ul class="texte">
+                <li>Dégâts : ★★★★★</li>
+                <li>Vitesse : ★★☆☆☆</li>
+                <li>Portée : ★★★★☆</li>
+                <li>Complexité : ★★★☆☆</li>
+            </ul>
+        </div>
+
+        <!-- LA FORGE -->
+        <div id="forge" class="contenu">
+            <p class="texte">
+                À la forge, la Grande Épée privilégie l’attaque brute, l’affinité et le tranchant. Certaines variantes élémentaires sont efficaces, mais les versions à dégâts purs restent les plus populaires. Le choix des talents est essentiel pour maximiser la puissance des charges.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Lien retour -->
+    <a href="MonsterHunterGenerationUltimate.html" class="retour">← Retour aux armes</a>
+
+</section>  
+
+<!-- SCRIPT DES ONGLETS -->
+<script>
+function changerOnglet(id, bouton) {
+    // cacher tous les contenus
+    document.querySelectorAll('.contenu').forEach(c => c.classList.remove('actif'));
+    // retirer l’état actif des onglets
+    document.querySelectorAll('.onglet').forEach(o => o.classList.remove('actif'));
+    // afficher le bon contenu
+    document.getElementById(id).classList.add('actif');
+    // activer le bouton cliqué
+    bouton.classList.add('actif');
+}
+</script>
+
+</body>
+</html>

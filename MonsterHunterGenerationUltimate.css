@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Image de fond globale */
+    background-image: url('mhgu.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* ====================== */
+/* HEADER PLEIN ÉCRAN     */
+/* ====================== */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 6px black;
+}
+
+/* ====================== */
+/* PAGE PRINCIPALE        */
+/* ====================== */
+.content {
+    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 60px;
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    color: #2b2b2b;
+    line-height: 1.8;
+    box-sizing: border-box; /* ✅ inclut padding dans la largeur */
+}
+
+/* ====================== */
+/* PAGES ARMES            */
+/* ====================== */
+.content-armes {
+    background-color: #f3e8d0; /* beige parchemin */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(180, 160, 120, 0.5);
+    
+    font-family: 'Cinzel', serif;
+    color: #2b2b2b;
+    line-height: 1.8;
+
+    /* texture parchemin optionnelle */
+    background-image: url('texture-parchemin.png');
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+/* ====================== */
+/* TITRES                 */
+/* ====================== */
+h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #7a0000;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    color: #7a0000;
+    text-align: center;
+    margin: 40px 0 20px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ====================== */
+/* PARAGRAPHES            */
+/* ====================== */
+p.texte {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2b2b2b;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* ====================== */
+/* IMAGE + TEXTE CÔTE À CÔTE POUR ARMES */
+/* ====================== */
+.arme-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.arme-layout .arme-image {
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.arme-layout .texte {
+    flex: 1;
+}
+
+/* ====================== */
+/* SECTIONS DÉTAILLÉES SOUS L'IMAGE */
+/* ====================== */
+.sections-bas {
+    margin-top: 30px;
+}
+
+.sections-bas h2 {
+    color: #7a0000;
+    font-family: 'Cinzel', serif;
+    margin-top: 20px;
+}
+
+.sections-bas ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.sections-bas p {
+    margin-bottom: 20px;
+}
+
+/* ====================== */
+/* GRILLE ARMES PAGE PRINCIPALE */
+/* ====================== */
+.grid-armes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 par ligne */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.arme {
+    text-align: center;
+}
+
+.arme img {
+    width: 100%;
+    max-width: 200px;
+    transition: transform 0.3s;
+}
+
+.arme img:hover {
+    transform: scale(1.05);
+}
+
+.arme p {
+    margin-top: 10px;
+    font-family: 'Cinzel', serif;
+    color: #7a0000;
+}
+
+.arme a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ====================== */
+/* ONGLET STYLE MHGU ARMES */
+/* ====================== */
+.onglets {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+    position: sticky; /* toujours visible en haut */
+    top: 10px;
+    z-index: 10;
+    background-color: rgba(243, 232, 208, 0.9);
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.onglet {
+    background: linear-gradient(#ead9b0, #d9c08a);
+    color: #7a0000;
+    border: 2px solid #b88f50;
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.onglet.actif {
+    background-color: #d6b36a;
+}
+
+/* CONTENU DES ONGLETS */
+.contenu {
+    display: none;
+}
+
+.contenu.actif {
+    display: block;
+}
+
+/* ====================== */
+/* TABLEAU STYLE & ARTS   */
+/* ====================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 2px solid #b88f50;
+    padding: 10px;
+    text-align: left;
+    font-family: 'Cinzel', serif;
+}
+
+table th {
+    background-color: #ead9b0;
+    color: #7a0000;
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* ====================== */
+/* LIEN RETOUR            */
+/* ====================== */
+.retour {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Cinzel', serif;
+    color: #7a0000;
+    text-decoration: none;
+}
+
+.retour:hover {
+    text-decoration: underline;
+}
+/* LOGO PRINCIPAL */
+.logo-principal {
+    display: block;             /* centre l'image */
+    max-width: 100%;             /* jamais plus large que le conteneur */
+    width: auto;                 /* ne s’étire pas */
+    height: auto;                /* proportions conservées */
+    margin: 0 auto 50px;
+    box-sizing: border-box;      /* prend padding du conteneur en compte */
+    object-fit: contain;         /* évite qu’elle dépasse visuellement */
+    max-height: 400px;           /* optionnel : limite la hauteur */
+}
+
+/* IMAGE DES ARMES */
+.arme-image {
+    max-width: 200px; /* largeur fixe pour toutes les armes */
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
